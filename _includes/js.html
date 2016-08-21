@@ -1,0 +1,20 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="/{{ site.baseurl }}static/js/thickbox-compressed.js"></script>
+<script src="/{{ site.baseurl }}static/js/material.min.js"></script>
+<script src="/{{ site.baseurl }}static/js/main.js"></script>
+<script src="/{{ site.baseurl }}static/js/konami.js"></script>
+<script>
+    var easter_egg = new Konami(function() {
+    var songs = ['/assets/himno-rm.mp3', '/assets/himno-ldu.mp3']
+    var randomSong = songs[Math.floor(Math.random() * songs.length)];
+    var audio = new Audio(randomSong);
+    if (audio.currentTime == 0){
+      audio.play();
+    } else {
+      audio.load();
+      audio.currentTime = 0;
+    }
+  });
+</script>
