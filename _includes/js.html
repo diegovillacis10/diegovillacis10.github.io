@@ -6,15 +6,11 @@
 <script src="/{{ site.baseurl }}static/js/main.js"></script>
 <script src="/{{ site.baseurl }}static/js/konami.js"></script>
 <script>
-    var easter_egg = new Konami(function() {
+  var easter_egg = new Konami(function() {
     var songs = ['/assets/himno-rm.mp3', '/assets/himno-ldu.mp3']
     var randomSong = songs[Math.floor(Math.random() * songs.length)];
-    var audio = new Audio(randomSong);
-    if (audio.currentTime == 0){
-      audio.play();
-    } else {
-      audio.load();
-      audio.currentTime = 0;
-    }
+    var audioElement = document.getElementById('konami-audio');
+    audioElement.src = randomSong;
+    audioElement.play();
   });
 </script>
