@@ -22,14 +22,14 @@ Vagrant.configure(2) do |config|
 end
 ```
 
-Con lo cual al momento de iniciar la máquina de Vagrant `vagrant up`, y usando el comando de
+Con esto, al momento de iniciar la máquina de Vagrant `vagrant up`, y usando el comando de
 aprovisionamiento `vagrant provision` el playbook de ansible `playbook.yml` (que existe al mismo
 nivel que el `Vagrantfile`) será llamado por vagrant para que aprovisione la máquina.
 
-### ¿Pero qué pasa cuando queremos usar el comando `ansible-playbook` para ejecutar playbooks en una máquina de vagrant ya levanta?
+### ¿Pero qué pasa cuando queremos usar el comando `ansible-playbook` para ejecutar playbooks en una máquina de vagrant ya levantada?
 
 Para este ejemplo usaremos una máquina de ubuntu de vagrant para virtualbox, corriendo en la
-terminal el siguiente comando. El cual ya nos generará el `Vagrantfile`.
+terminal el siguiente comando, el cual ya nos generará el `Vagrantfile`.
 
 ```sh
 $ vagrant init ubuntu/trusty64; vagrant up --provider virtualbox
@@ -63,7 +63,7 @@ que si recordamos cómo funciona Ansible, éste se conecta mediante llaves a las
 tenemos que buscar otra opción.
 
 Y en la mayoría de los casos, usamos `become: yes` para decirle a ansible que ejecute los comandos
-como `sudo`,
+como `sudo`.
 
 Por ejemplo, aquí tenemos un pequeño playbook que lo que hace es simplemente instalar git con su
 respectivo inventory.
