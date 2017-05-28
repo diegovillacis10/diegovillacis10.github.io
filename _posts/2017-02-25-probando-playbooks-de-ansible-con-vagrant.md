@@ -5,8 +5,6 @@ date:   2017-02-26 12:05:00
 categories: infrastructure
 ---
 
-## ************ 🦀⚠️**BORRADOR**⚠️🦀 ************
-
 # Probando playbooks de Ansible con Vagrant
 
 En el internet puedes encontrar varios ejemplos de [cómo probar tus playbooks de Ansible usando Vagrant](https://docs.ansible.com/ansible/guide_vagrant.html){:target="_blank"}. Pero, eso nos ayuda
@@ -26,7 +24,8 @@ Con esto, al momento de iniciar la máquina de Vagrant `vagrant up`, y usando el
 aprovisionamiento `vagrant provision` el playbook de ansible `playbook.yml` (que existe al mismo
 nivel que el `Vagrantfile`) será llamado por vagrant para que aprovisione la máquina.
 
-### ¿Pero qué pasa cuando queremos usar el comando `ansible-playbook` para ejecutar playbooks en una máquina de vagrant ya levantada?
+### ¿Pero qué pasa cuando queremos usar el comando `ansible-playbook` para ejecutar playbooks en una
+máquina de vagrant ya levantada?
 
 Para este ejemplo usaremos una máquina de ubuntu de vagrant para virtualbox, corriendo en la
 terminal el siguiente comando, el cual ya nos generará el `Vagrantfile`.
